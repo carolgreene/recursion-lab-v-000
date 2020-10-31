@@ -8,7 +8,7 @@ function printString(myString) {
       
       let mySubString = myString.substring(1, myString.length);
       //console.log(mySubStr)
-      printString(mySubString)
+      return printString(mySubString)
     } else {
       return true
     }
