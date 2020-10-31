@@ -48,6 +48,42 @@ function printString(myString) {
         //str = str.substr(1, str.length - 2)
         return isPalidrome(str.substr(1, str.length - 2))
       }
+
+
+      //ARRAY RECURSIONS
+
+      //addUpTo is a function that takes an array & an
+//index. Adds up the numbers in the array up to &
+//including the number in the given index
+
+let total = 0
+
+function addUpTo(arr, index) {  
+  console.log('index', index) 
+  //set the base case
+  if (index < 0) {
+    return total
+  } else {
+    total = total + arr[index]
+    //call recursion and decrement the index
+    return addUpTo(arr, --index)
+  }
+}
+
+
+
+/*this is flatiron's solution. I don't really understand
+how it works, but it does
+function addUpTo(arr, index) {  
+  //keep calling recursion till u can't decriment index anymore
+  //adding total from each call to the new call?
+  return index ? arr[index] + addUpTo(arr, --index) : arr[index]
+  }
+  */
+  
+  
+  
+
       
       
       
